@@ -1,0 +1,228 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Lato", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #365669;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.main-wrapper {
+  background-color: #fff;
+  color: #333;
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear;
+  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.main-wrapper.slide {
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+}
+
+.main-wrapper.slide + .navigation {
+  opacity: 1;
+}
+
+.main-wrapper.slide .navCircle {
+  -webkit-transform: rotate(-70deg);
+          transform: rotate(-70deg);
+}
+
+.navCircle-wrapper {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+
+.navCircle-wrapper .navCircle {
+  background: #365669;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear;
+  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+  position: relative;
+}
+
+.navCircle-wrapper .navCircle button {
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+  font-size: 1.6rem;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.navCircle-wrapper .navCircle button:focus {
+  outline: none;
+}
+
+.navCircle-wrapper .navCircle button.open-nav {
+  left: 60%;
+}
+
+.navCircle-wrapper .navCircle button.close-nav {
+  top: 60%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.sub-wrapper {
+  padding: 0 0 2rem;
+}
+
+.section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section.header {
+  background-image: url(/Alpha-Shops/img/vehicle.jpg);
+  background-position: center;
+  background-size: cover;
+  background-color: #333;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  color: #fff;
+  font-family: "Merriweather", sans-serif;
+  padding: 10rem 2rem;
+  width: 100%;
+  height: 65vh;
+}
+
+.section.sub-header {
+  padding: 2rem 0 1rem;
+  text-align: center;
+}
+
+.section.sub-header .heading-text {
+  font-size: 60px;
+  font-weight: 900;
+  margin-bottom: 1.2rem;
+  letter-spacing: 3px;
+}
+
+.section.sub-header .subtext {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+}
+
+.section.sub-header .subheading-text {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 0 0 0.5rem;
+  border: 2px solid red;
+}
+
+.section.sub-header .content-paragraph {
+  font-size: 22px;
+  line-height: 1.4;
+  margin-bottom: 0.8rem;
+}
+
+.section.sub-header .redirect-link {
+  background: #365669;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 0.8rem 1.5rem;
+}
+
+.section.sub-header .redirect-link:hover {
+  opacity: 0.9;
+}
+
+.content-wrapper {
+  width: 80%;
+}
+
+.navigation {
+  position: fixed;
+  bottom: 10px;
+  left: 20px;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-in 0.2s;
+  transition: opacity 0.4s ease-in 0.2s;
+}
+
+.navigation .nav-list .nav-item {
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  list-style: none;
+}
+
+.navigation .nav-list .nav-item:hover {
+  cursor: pointer;
+  color: #333;
+}
+
+.navigation .nav-list .nav-item .nav-icon {
+  margin-right: 10px;
+}
+
+.navigation .nav-list .nav-item .nav-link {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+@media (max-width: 680px) {
+  .section.sub-header .heading-text {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 420px) {
+  .navCircle-wrapper {
+    top: -80px;
+    left: -80px;
+  }
+  .navCircle-wrapper .navCircle {
+    width: 160px;
+    height: 160px;
+  }
+  .section.sub-header .subtext {
+    font-size: 17px;
+    line-height: 1.2;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
